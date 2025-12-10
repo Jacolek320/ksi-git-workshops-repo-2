@@ -1,6 +1,11 @@
 #include <iostream>
 #include <cstdlib>
 int main(int argc, char **argv) {
+  if (argc != 2) {
+    std::cerr << "Usage: " << argv[0] << " <number>" << std::endl;
+    return 1;
+  }
+
   int n = atoi(argv[1]);
 
   for (int i = 1; i <= n; ++i) {
